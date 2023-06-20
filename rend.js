@@ -26,7 +26,7 @@ export class Rend {
         const fullPath = url.pathToFileURL(path.join(process.cwd(), bodyFunc));
         console.log("rend path: ", fullPath);
 
-        let template = await import(fullPath);
+        template = await import(fullPath);
 
         if (this.options.prod) {
           this.templates[bodyFunc] = template;
